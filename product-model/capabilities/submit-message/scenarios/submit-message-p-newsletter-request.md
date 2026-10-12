@@ -1,0 +1,119 @@
+---
+{
+  "kind": "primary",
+  "routes": {
+    "main": "Public website"
+  },
+  "steps": [
+    {
+      "kind": "actor",
+      "actor": "visitor",
+      "text": "Submit the configured form stage and its supplied continuation proof.",
+      "entities": [],
+      "contexts": {
+        "main": {
+          "place": "website::public::conversation"
+        }
+      }
+    },
+    {
+      "kind": "product",
+      "actor": "visitor",
+      "text": "The first valid stage persists an unpublished submission and returns continuation proof bound to its saved identity and next stage.",
+      "entities": [
+        {
+          "entity": "message",
+          "effect": "creates",
+          "facts": [
+            "Reference",
+            "Content",
+            "Author name",
+            "Author email",
+            "Author IP",
+            "Referring value",
+            "Host",
+            "Locale",
+            "Publication date",
+            "Deleted at",
+            "Created at",
+            "Updated at",
+            "Tags",
+            "Weight",
+            "Custom properties",
+            "Media"
+          ],
+          "to": "Unpublished"
+        }
+      ],
+      "contexts": {
+        "main": {
+          "place": "website::public::conversation"
+        }
+      }
+    },
+    {
+      "kind": "actor",
+      "actor": "visitor",
+      "text": "Submit author name with the bound continuation proof.",
+      "entities": [],
+      "contexts": {
+        "main": {
+          "place": "website::public::conversation"
+        }
+      }
+    },
+    {
+      "kind": "product",
+      "actor": "visitor",
+      "text": "The accepted continuation updates the same saved submission and consumes the workflow proof at completion.",
+      "entities": [
+        {
+          "entity": "message",
+          "effect": "changes",
+          "facts": [
+            "Content",
+            "Author name"
+          ]
+        }
+      ],
+      "contexts": {
+        "main": {
+          "place": "website::public::conversation"
+        }
+      }
+    }
+  ],
+  "references": [
+    {
+      "kind": "code",
+      "role": "implementation",
+      "target": "packages/conversation/src/Controller/ConversationFormController.php"
+    },
+    {
+      "kind": "code",
+      "role": "implementation",
+      "target": "packages/conversation/src/Entity/Message.php"
+    },
+    {
+      "kind": "code",
+      "role": "implementation",
+      "target": "packages/conversation/src/Form/AbstractConversationForm.php"
+    },
+    {
+      "kind": "code",
+      "role": "implementation",
+      "target": "packages/conversation/src/Form/NewsletterForm.php"
+    }
+  ]
+}
+---
+
+# Submit message — newsletter request
+
+## Trigger
+
+Submit message through public website using the newsletter request way.
+
+## Outcome
+
+The first valid stage creates one unpublished submission. The bound continuation updates that same submission and consumes its proof on completion.

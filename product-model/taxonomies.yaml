@@ -1,0 +1,19 @@
+{
+  "scenarioKinds": [
+    {
+      "id": "primary",
+      "name": "Primary",
+      "description": "An established way that reaches the capability outcome."
+    },
+    {
+      "id": "validation",
+      "name": "Validation",
+      "description": "A distinguished input, access or precondition refusal."
+    },
+    {
+      "id": "edge",
+      "name": "Edge",
+      "description": "A distinguished conflict, boundary, fallback or failure outcome."
+    }
+  ]
+}
