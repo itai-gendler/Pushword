@@ -42,7 +42,8 @@
       "paths": [
         "packages/api/src/Controller/",
         "packages/api/src/Service/",
-        "packages/api/src/Security/"
+        "packages/api/src/Security/",
+        "packages/api/src/DependencyInjection/Configuration.php"
       ]
     },
     {

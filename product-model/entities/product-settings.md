@@ -15,6 +15,11 @@
       "kind": "code",
       "role": "implementation",
       "target": "packages/template-editor/src/ElementAdmin.php"
+    },
+    {
+      "kind": "code",
+      "role": "implementation",
+      "target": "packages/api/src/DependencyInjection/Configuration.php"
     }
   ],
   "singleton": true
@@ -36,3 +41,4 @@ The Product’s retained deployment configuration, maintained outside the mapped
 - **Scanner settings** — Configured scan coordination, interval and selection settings.
 - **Template creation restricted** — Whether ordinary template creation, removal and path movement are disabled; Super Administrators bypass this restriction.
 - **Editable template paths** — The configured selection of existing templates; an empty list selects all.
+- **Delete strategy** — How the Page API treats a deleted page: Hard (the default) or Soft.

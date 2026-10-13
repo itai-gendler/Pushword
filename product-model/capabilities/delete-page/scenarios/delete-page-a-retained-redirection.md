@@ -8,13 +8,32 @@
     {
       "kind": "actor",
       "actor": "editor",
-      "text": "Delete through hard strategy with a supported external or dangling internal target.",
+      "text": "Delete the selected source with a supported external or dangling internal target.",
       "entities": [],
       "contexts": {
         "main": {
           "place": "cms-api::editorial"
         }
       }
+    },
+    {
+      "kind": "condition",
+      "text": "Delete strategy is Hard (the default).",
+      "entities": [
+        {
+          "entity": "product-settings",
+          "effect": "reads",
+          "facts": [
+            "Delete strategy"
+          ]
+        }
+      ],
+      "contexts": {
+        "main": {
+          "place": "cms-api::editorial"
+        }
+      },
+      "actor": "editor"
     },
     {
       "kind": "condition",

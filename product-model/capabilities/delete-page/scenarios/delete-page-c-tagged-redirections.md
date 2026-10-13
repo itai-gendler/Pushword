@@ -8,7 +8,7 @@
     {
       "kind": "actor",
       "actor": "site-operator",
-      "text": "Request the selected deletion strategy with its destination or confirmation.",
+      "text": "Delete the redirect-only records carrying the chosen tag and confirm.",
       "entities": [],
       "contexts": {
         "main": {

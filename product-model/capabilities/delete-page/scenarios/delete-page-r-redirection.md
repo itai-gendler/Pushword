@@ -8,7 +8,7 @@
     {
       "kind": "actor",
       "actor": "editor",
-      "text": "Request the selected deletion strategy with its destination or confirmation.",
+      "text": "Delete the selected redirect-only record.",
       "entities": [],
       "contexts": {
         "main": {

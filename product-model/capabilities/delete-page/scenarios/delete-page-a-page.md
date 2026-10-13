@@ -8,13 +8,32 @@
     {
       "kind": "actor",
       "actor": "editor",
-      "text": "Delete the selected published source with hard strategy and an existing internal non-redirect destination that does not yet own its path.",
+      "text": "Delete the selected published source with an existing internal non-redirect destination that does not yet own its path.",
       "entities": [],
       "contexts": {
         "main": {
           "place": "cms-api::editorial"
         }
       }
+    },
+    {
+      "kind": "condition",
+      "text": "Delete strategy is Hard (the default).",
+      "entities": [
+        {
+          "entity": "product-settings",
+          "effect": "reads",
+          "facts": [
+            "Delete strategy"
+          ]
+        }
+      ],
+      "contexts": {
+        "main": {
+          "place": "cms-api::editorial"
+        }
+      },
+      "actor": "editor"
     },
     {
       "kind": "condition",

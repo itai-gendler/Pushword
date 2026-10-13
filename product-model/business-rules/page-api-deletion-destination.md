@@ -34,4 +34,4 @@
 
 # Page API deletion requires a supported destination
 
-API deletion requires a supported destination and rejects missing or self targets. An existing internal non-redirect destination can receive the old path while the source is removed; other supported destinations retain a redirect record. These strategies do not become ordinary administration or operator deletion parity.
+API deletion requires a supported destination and rejects missing or self targets. This holds under both delete strategies; administration and operator deletion do not require a destination.

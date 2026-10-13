@@ -6,13 +6,7 @@
       "id": "delete-page",
       "contexts": [
         {
-          "place": "administration::editorial"
-        },
-        {
           "place": "cms-api::editorial"
-        },
-        {
-          "place": "operator-cli"
         }
       ]
     }
@@ -49,4 +43,4 @@
 
 # Soft deletion retains an unpublished redirect-only record
 
-Soft deletion retains a redirect-only source record with publication cleared. Redirect fallback can still emit its destination, so draft status is not universal redirect suppression.
+Soft deletion always retains the source as a redirect-only record to the supplied destination, with publication cleared. Redirect fallback can still emit its destination, so draft status is not universal redirect suppression.

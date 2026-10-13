@@ -8,13 +8,32 @@
     {
       "kind": "actor",
       "actor": "editor",
-      "text": "Request the selected deletion strategy with its destination or confirmation.",
+      "text": "Delete the selected source with a supported destination and response code.",
       "entities": [],
       "contexts": {
         "main": {
           "place": "cms-api::editorial"
         }
       }
+    },
+    {
+      "kind": "condition",
+      "text": "Delete strategy is Soft.",
+      "entities": [
+        {
+          "entity": "product-settings",
+          "effect": "reads",
+          "facts": [
+            "Delete strategy"
+          ]
+        }
+      ],
+      "contexts": {
+        "main": {
+          "place": "cms-api::editorial"
+        }
+      },
+      "actor": "editor"
     },
     {
       "kind": "condition",
